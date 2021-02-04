@@ -1,9 +1,0 @@
-&comp_inparm 
-
-
-
-fsurdat="$MYCTSMDATA/lnd/clm2/surfdata_map/surfdata_0.5x0.5_16pfts_CMIP6_simyr1850_SCA.nc"
-
-hist_nhtfrq = -24
-
-/ 
