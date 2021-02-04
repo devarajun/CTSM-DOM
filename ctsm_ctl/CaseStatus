@@ -1,0 +1,75 @@
+2021-01-07 14:02:39: xmlchange success <command> ./xmlchange MOSART_MODE=ACTIVE  </command>
+ ---------------------------------------------------
+2021-01-07 14:03:08: xmlchange success <command> ./xmlchange DIN_LOC_ROOT=/cluster/shared/noresm/regdata  </command>
+ ---------------------------------------------------
+2021-01-07 14:03:17: xmlchange success <command> ./xmlchange DIN_LOC_ROOT_CLMFORC=/cluster/shared/noresm/inputdata/atm/datm7  </command>
+ ---------------------------------------------------
+2021-01-07 14:03:39: xmlchange success <command> ./xmlchange ATM_DOMAIN_PATH=/cluster/shared/noresm/regdata/share/domains,LND_DOMAIN_PATH=/cluster/shared/noresm/regdata/share/domains  </command>
+ ---------------------------------------------------
+2021-01-07 14:03:46: xmlchange success <command> ./xmlchange ATM_DOMAIN_FILE=domain.lnd.0.5x0.5SCA.nc,LND_DOMAIN_FILE=domain.lnd.0.5x0.5SCA.nc,ROF_DOMAIN_FILE=domain.lnd.0.5x0.5SCA.nc  </command>
+ ---------------------------------------------------
+2021-01-07 14:03:54: xmlchange success <command> ./xmlchange ROF2LND_FMAPNAME=/cluster/shared/noresm/regdata/lnd/clm2/mappingdata/maps/map_SCA05x05_runoff_to_land_c201101.nc  </command>
+ ---------------------------------------------------
+2021-01-07 14:04:04: xmlchange success <command> ./xmlchange LND2ROF_FMAPNAME=/cluster/shared/noresm/regdata/lnd/clm2/mappingdata/maps/map_SCA05x05_land_to_runoff_c201101.nc  </command>
+ ---------------------------------------------------
+2021-01-07 14:04:12: xmlchange success <command> ./xmlchange LND2ROF_FMAPTYPE=Y  </command>
+ ---------------------------------------------------
+2021-01-07 14:04:20: xmlchange success <command> ./xmlchange NTASKS=32  </command>
+ ---------------------------------------------------
+2021-01-07 14:04:47: xmlchange success <command> ./xmlchange ROF_GRID=r05  </command>
+ ---------------------------------------------------
+2021-01-07 14:05:03: xmlchange success <command> ./xmlchange CLM_USRDAT_NAME=ctsm_ctl  </command>
+ ---------------------------------------------------
+2021-01-07 14:05:15: case.setup starting 
+ ---------------------------------------------------
+2021-01-07 14:05:17: case.setup success 
+ ---------------------------------------------------
+2021-01-07 14:07:13: case.build starting 
+ ---------------------------------------------------
+CESM version is ctsm5.1.dev020
+Processing externals description file : Externals.cfg
+Processing externals description file : Externals_CLM.cfg
+Processing externals description file : Externals_CISM.cfg
+Processing externals description file : .gitmodules
+Processing submodules description file : .gitmodules
+Processing externals description file : .gitmodules
+Processing submodules description file : .gitmodules
+Checking status of externals: clm, fates, ptclm, mosart, mizuroute, cime, rtm, cism, source_cism, cdeps, fox, cmeps, nems/lib/parallelio, nems/lib/genf90, doc-builder, 
+ M  ./cime
+        modified sandbox, on branch_tags/cime5.8.32_a02
+    ./cime/src/drivers/nuopc/
+        clean sandbox, on 76540383e4bd37142814812903fc2eed4a1b39e1
+    ./cime/src/drivers/nuopc/nems/lib/ParallelIO
+        clean sandbox, on pio2_4_4
+    ./cime/src/drivers/nuopc/nems/lib/genf90
+        clean sandbox, on genf90_140121
+    ./components/cdeps
+        clean sandbox, on 45b7a85823da1d187fe500d1be6e96bbcd1dff2e
+    ./components/cdeps/fox
+        clean sandbox, on 7b9488446b193192dd3f0378541e71099cb4e8a8
+    ./components/cism
+        clean sandbox, on cism2_1_69
+    ./components/cism/source_cism
+        clean sandbox, on f1a88d6bbe3bb5e2e8817f91aed6de87227f4bb7
+    ./components/mizuRoute
+        clean sandbox, on 34723c2e4df7caa16812770f8d53ebc83fa22360
+    ./components/mosart
+        clean sandbox, on mosart1_0_38
+    ./components/rtm
+        clean sandbox, on rtm1_0_73
+e-o ./doc/doc-builder
+        -, not checked out --> v1.0.5
+    ./src/fates
+        clean sandbox, on sci.1.30.0_api.8.0.0
+    ./tools/PTCLM
+        clean sandbox, on PTCLM2_20200121
+2021-01-07 14:13:19: case.build success 
+ ---------------------------------------------------
+2021-01-07 14:14:45: case.run starting 
+ ---------------------------------------------------
+2021-01-07 14:14:49: model execution starting 
+ ---------------------------------------------------
+2021-01-07 14:16:13: model execution success 
+ ---------------------------------------------------
+2021-01-07 14:16:13: case.run success 
+ ---------------------------------------------------

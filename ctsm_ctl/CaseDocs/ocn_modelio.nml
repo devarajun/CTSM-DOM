@@ -1,0 +1,13 @@
+&modelio
+  diri = "/cluster/work/users/devarajun/ctsm/ctsm_ctl/bld/ocn"
+  diro = "/cluster/work/users/devarajun/ctsm/ctsm_ctl/run"
+  logfile = "ocn.log.1390419.210107-141445"
+/
+&pio_inparm
+  pio_netcdf_format = "64bit_offset"
+  pio_numiotasks = -99
+  pio_rearranger = 1
+  pio_root = 1
+  pio_stride = 32
+  pio_typename = "netcdf"
+/

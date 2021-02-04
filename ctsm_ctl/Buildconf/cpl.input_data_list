@@ -1,0 +1,2 @@
+lnd2rof_fmapname = /cluster/shared/noresm/regdata/lnd/clm2/mappingdata/maps/map_SCA05x05_land_to_runoff_c201101.nc
+rof2lnd_fmapname = /cluster/shared/noresm/regdata/lnd/clm2/mappingdata/maps/map_SCA05x05_runoff_to_land_c201101.nc

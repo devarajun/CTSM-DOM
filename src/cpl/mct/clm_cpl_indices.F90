@@ -22,7 +22,7 @@ module clm_cpl_indices
                                   ! (from coupler) - must equal maxpatch_glcmec from namelist
 
   ! lnd -> drv (required)
-
+  integer, public ::index_l2x_Flrl_liqgrd     ! lnd->MOSART input liquid surface fluxes 
   integer, public ::index_l2x_Flrl_rofsur     ! lnd->rtm input liquid surface fluxes
   integer, public ::index_l2x_Flrl_rofgwl     ! lnd->rtm input liquid gwl fluxes
   integer, public ::index_l2x_Flrl_rofsub     ! lnd->rtm input liquid subsurface fluxes
@@ -171,6 +171,7 @@ contains
     ! clm -> drv 
     !-------------------------------------------------------------
 
+    index_l2x_Flrl_liqgrd   = mct_avect_indexra(l2x,'Flrl_liqgrd')
     index_l2x_Flrl_rofsur   = mct_avect_indexra(l2x,'Flrl_rofsur')
     index_l2x_Flrl_rofgwl   = mct_avect_indexra(l2x,'Flrl_rofgwl')
     index_l2x_Flrl_rofsub   = mct_avect_indexra(l2x,'Flrl_rofsub')
