@@ -213,7 +213,7 @@ module CNFUNMod
    use clm_time_manager, only : get_step_size_real, get_curr_date, get_days_per_year 
    use clm_varpar      , only : nlevdecomp
    use clm_varcon      , only : secspday, smallValue, fun_period, tfrz, dzsoi_decomp, spval
-   use clm_varctl      , only : use_nitrif_denitrif
+   use clm_varctl      , only : use_nitrif_denitrif, use_dom
    use PatchType       , only : patch
    use subgridAveMod   , only : p2c
    use pftconMod       , only : npcropmin
@@ -1793,7 +1793,17 @@ fix_loop:   do FIX =plants_are_fixing, plants_not_fixing !loop around percentage
    end do
 
  end subroutine fun_retranslocation
-
+ 
+ subroutine throughfalldry(leafc, dry_throughfall)
+     !This subroutine calculates the dry deposition of DOC from the canopy
+     real(r8), intent(inout)  :: leafc            !gC/m2 INPUT and OUTPUT variable
+     real(r8), intent(out)    :: dry_throughfall  !OUTPUT variable 
+     !local constant for the throughfall calculation
+     real(r8), parameter      :: production_rate = 9.2_r8 * 1.e-4_r8 
+     ! g of DOC per gram of leaf biomass per day
+     dry_throughfall  = leafc * production_rate
+     leafc            = leafc - dry_throughfall !update leaf C
+ end subroutine throughfalldry
 !==========================================================================
 
 end module CNFUNMod 

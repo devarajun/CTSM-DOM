@@ -34,8 +34,8 @@ module Waterlnd2atmType
      real(r8), pointer :: qflx_rofliq_drain_perched_grc    (:)   ! rof liq -- perched water table runoff component
      real(r8), pointer :: qflx_rofice_grc    (:)   ! rof ice forcing
      real(r8), pointer :: qflx_liq_from_ice_col(:) ! liquid runoff from converted ice runoff
+     real(r8), pointer :: qflx_liq_grd_col   (:)   ! liquid canopy throughfall from land to MOSART
      real(r8), pointer :: qirrig_grc         (:)   ! irrigation flux
-
    contains
 
      procedure, public  :: Init
@@ -126,11 +126,16 @@ contains
     call AllocateVar1d(var = this%qflx_liq_from_ice_col, name = 'qflx_liq_from_ice_col', &
          container = tracer_vars, &
          bounds = bounds, subgrid_level = BOUNDS_SUBGRID_COLUMN, &
-         ival=ival)
+         ival=ival) 
+    call AllocateVar1d(var = this%qflx_liq_grd_col, name = 'qflx_liq_grd_col', &
+         container = tracer_vars, & 
+         bounds = bounds, subgrid_level = BOUNDS_SUBGRID_COLUMN, &
+         ival=ival) 
     call AllocateVar1d(var = this%qirrig_grc, name = 'qirrig_grc', &
          container = tracer_vars, &
          bounds = bounds, subgrid_level = BOUNDS_SUBGRID_GRIDCELL, &
-         ival=ival)
+         ival=ival) 
+
 
   end subroutine InitAllocate
 
@@ -173,7 +178,7 @@ contains
          avgflag='A', &
          long_name=this%info%lname('liquid runoff from converted ice runoff'), &
          ptr_col=this%qflx_liq_from_ice_col, default='inactive')
-
+   
   end subroutine InitHistory
 
   !-----------------------------------------------------------------------

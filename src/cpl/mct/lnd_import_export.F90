@@ -311,6 +311,9 @@ contains
        if (index_l2x_Fall_methane /= 0) then
           l2x(index_l2x_Fall_methane,i) = -lnd2atm_inst%ch4_surf_flux_tot_grc(g)
        endif
+       
+       ! liquid canopy throughfall from land to MOSART
+       l2x(index_l2x_Flrl_liqgrd,i) = waterlnd2atmbulk_inst%qflx_liq_grd_col(g)
 
        ! sign convention is positive downward with 
        ! hierarchy of atm/glc/lnd/rof/ice/ocn.  
